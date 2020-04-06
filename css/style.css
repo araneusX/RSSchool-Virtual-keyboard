@@ -23,6 +23,7 @@ body {
 .intro {
   max-width: 55vw;
   min-width: 55vw;
+  margin-bottom: 2vw;
 }
 
 .intro a {

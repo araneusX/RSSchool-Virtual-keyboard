@@ -12,7 +12,7 @@ metaDevice.setAttribute('name', 'viewport');
 metaDevice.setAttribute('content', 'width=device-width, initial-scale=1.0');
 
 style.setAttribute('rel', 'stylesheet');
-style.setAttribute('href', 'CSS/style.css');
+style.setAttribute('href', 'css/style.css');
 
 favicon.setAttribute('rel', 'icon');
 favicon.setAttribute('href', 'favicon.ico');
