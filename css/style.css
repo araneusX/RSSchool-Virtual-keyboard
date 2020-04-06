@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Consolas'),
+       url('../fonts/consola.woff') format('woff'), 
+       url('../fonts/consola.ttf') format('ttf');
+}
+
+html {
+  min-width: 90vw;
+  font-family: 'Consolas';
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  max-width: 55vw;
+  min-width: 55vw;
+}
+
+.intro a {
+  color: black;
+  text-decoration: none;
+}
+
+textarea {
+  font-family: 'Consolas';
+  font-size: 0.9vw;
+  max-width: 55vw;
+  min-width: 55vw;
+  outline: none;
+  padding: 1vw;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.key {
+  flex: 0 0 3vw;
+  height: 3vw;
+  margin: 0.25vw;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Consolas;
+  font-size: 1vw;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 3vw;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: color 0.1s linear;
+}
+
+.key.pressed {
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5) inset;
+  background-color: rgba(9, 255, 0, 0.164);
+  transition: color 0.1s linear;
+}
+
+.stretch {
+  flex: 5 0 3vw;
+}
+
+.row:nth-child(4)>.key:last-child {
+  flex: 1 0 3vw;
+}
+
+.row:nth-child(5)>.key:nth-child(7) {
+  margin-left: 1vw;
+}
+
+.row:nth-child(4)>.key:nth-child(12){
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+
+}
+
+.row:nth-child(5)>.key:last-child {
+  margin-right: 1.85vw;
+}
+
+.row:nth-child(5)>.key:first-child {
+  margin-left: 1.85vw;
+}
+
+.firstChar {
+  vertical-align: 50%;
+  font-size: 0.75em;
+  margin-right: 0.5vw;
+  line-height: 1.5vw;
+}
+
+.secondChar {
+  vertical-align: -50%;
+  line-height: 1.5vw;
+}
+
+.key.caps {
+  box-shadow:
+    0px 0px 3px 1px rgba(0, 0, 0, 0.5),
+    0px 0px 0px 6px white inset,
+    0px 0px 0px 8px rgb(157, 255, 0) inset;
+}
+
+.key.caps.pressed {
+  box-shadow:
+  0px 0px 3px 1px rgba(0, 0, 0, 0.5) inset,
+    0px 0px 0px 6px rgba(9, 255, 0, 0.164) inset,
+    0px 0px 0px 6px white inset,
+    0px 0px 0px 8px rgb(157, 255, 0) inset;
+}
