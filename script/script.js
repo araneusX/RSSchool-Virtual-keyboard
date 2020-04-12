@@ -93,70 +93,70 @@ const getDOMContent = (content) => {
 /* constants */
 
 const keys = [
-  ['char', 'Backquote', '~`', '`', '~', 'Ё', 'ё', 'Ё'],
-  ['char', 'Digit1', '!1', '1', '!', '!1', '1', '!'],
-  ['char', 'Digit2', '@2', '2', '@', '"2', '2', '"'],
-  ['char', 'Digit3', '#3', '3', '#', '№3', '3', '№'],
-  ['char', 'Digit4', '$4', '4', '$', ';4', '4', ';'],
-  ['char', 'Digit5', '%5', '5', '%', '%5', '5', '%'],
-  ['char', 'Digit6', '^6', '6', '^', ':6', '6', ':'],
-  ['char', 'Digit7', '&7', '7', '&', '?7', '7', '?'],
-  ['char', 'Digit8', '*8', '8', '*', '*8', '8', '*'],
-  ['char', 'Digit9', '(9', '9', '(', '(9', '9', '('],
-  ['char', 'Digit0', ')0', '0', ')', ')0', '0', ')'],
-  ['char', 'Minus', '_-', '-', '_'],
-  ['char', 'Equal', '+=', '=', '+'],
-  ['action', 'Backspace', 'Backspace'],
-  ['char', 'Tab', 'Tab', '\t'],
-  ['char', 'KeyQ', 'Q', 'q', 'Q', 'Й', 'й', 'Й'],
-  ['char', 'KeyW', 'W', 'w', 'W', 'Ц', 'ц', 'Ц'],
-  ['char', 'KeyE', 'E', 'e', 'E', 'У', 'у', 'У'],
-  ['char', 'KeyR', 'R', 'r', 'R', 'К', 'к', 'К'],
-  ['char', 'KeyT', 'T', 't', 'T', 'Е', 'е', 'Е'],
-  ['char', 'KeyY', 'Y', 'y', 'Y', 'Н', 'н', 'Н'],
-  ['char', 'KeyU', 'U', 'u', 'U', 'Г', 'г', 'Г'],
-  ['char', 'KeyI', 'I', 'i', 'I', 'Ш', 'ш', 'Ш'],
-  ['char', 'KeyO', 'O', 'o', 'O', 'Щ', 'щ', 'Щ'],
-  ['char', 'KeyP', 'P', 'p', 'P', 'З', 'з', 'З'],
-  ['char', 'BracketLeft', '{[', '[', '{', 'Х', 'х', 'Х'],
-  ['char', 'BracketRight', '}]', ']', '}', 'Ъ', 'ъ', 'Ъ'],
-  ['char', 'Backslash', '|\\', '\\', '|', '/\\', '\\', '/'],
-  ['action', 'Delete', 'DEL'],
-  ['action', 'CapsLock', 'Caps Lock'],
-  ['char', 'KeyA', 'A', 'a', 'A', 'Ф', 'ф', 'Ф'],
-  ['char', 'KeyS', 'S', 's', 'S', 'Ы', 'ы', 'Ы'],
-  ['char', 'KeyD', 'D', 'd', 'D', 'В', 'в', 'В'],
-  ['char', 'KeyF', 'F', 'f', 'F', 'А', 'а', 'А'],
-  ['char', 'KeyG', 'G', 'g', 'G', 'П', 'п', 'П'],
-  ['char', 'KeyH', 'H', 'h', 'H', 'Р', 'р', 'Р'],
-  ['char', 'KeyJ', 'J', 'j', 'J', 'О', 'о', 'О'],
-  ['char', 'KeyK', 'K', 'k', 'K', 'Л', 'л', 'Л'],
-  ['char', 'KeyL', 'L', 'l', 'L', 'Д', 'д', 'Д'],
-  ['char', 'Semicolon', ':;', ';', ':', 'Ж', 'ж', 'Ж'],
-  ['char', 'Quote', '"\'', '\'', '"', 'Э', 'э', 'Э'],
-  ['char', 'Enter', 'ENTER', '\r'],
-  ['action', 'ShiftLeft', 'Shift'],
-  ['char', 'KeyZ', 'Z', 'z', 'Z', 'Я', 'я', 'Я'],
-  ['char', 'KeyX', 'X', 'x', 'X', 'Ч', 'ч', 'Ч'],
-  ['char', 'KeyC', 'C', 'c', 'C', 'С', 'с', 'C'],
-  ['char', 'KeyV', 'V', 'v', 'V', 'М', 'м', 'М'],
-  ['char', 'KeyB', 'B', 'b', 'B', 'И', 'и', 'И'],
-  ['char', 'KeyN', 'N', 'n', 'N', 'Т', 'т', 'Т'],
-  ['char', 'KeyM', 'M', 'm', 'M', 'Ь', 'ь', 'Ь'],
-  ['char', 'Comma', '<,', ',', '<', 'Б', 'б', 'Б'],
-  ['char', 'Period', '>.', '.', '>', 'Ю', 'ю', 'Ю'],
-  ['char', 'Slash', '?/', '/', '?', ',.', '.', ','],
-  ['action', 'ArrowUp', '\u2191'],
-  ['action', 'ShiftRight', 'Shift'],
-  ['action', 'ControlLeft', 'Ctrl'],
-  ['action', 'MetaLeft', 'Win'],
-  ['action', 'AltLeft', 'Alt'],
-  ['char', 'Space', '', ' '],
-  ['action', 'AltRight', 'Alt'],
-  ['action', 'ControlRight', 'Ctrl'],
-  ['action', 'ArrowLeft', '\u2190'],
-  ['action', 'ArrowDown', '\u2193'],
-  ['action', 'ArrowRight', '\u2192'],
+  ['char', true, 'Backquote', '~`', '`', '~', 'Ё', 'ё', 'Ё'],
+  ['char', false, 'Digit1', '!1', '1', '!', '!1', '1', '!'],
+  ['char', false, 'Digit2', '@2', '2', '@', '"2', '2', '"'],
+  ['char', false, 'Digit3', '#3', '3', '#', '№3', '3', '№'],
+  ['char', false, 'Digit4', '$4', '4', '$', ';4', '4', ';'],
+  ['char', false, 'Digit5', '%5', '5', '%', '%5', '5', '%'],
+  ['char', false, 'Digit6', '^6', '6', '^', ':6', '6', ':'],
+  ['char', false, 'Digit7', '&7', '7', '&', '?7', '7', '?'],
+  ['char', false, 'Digit8', '*8', '8', '*', '*8', '8', '*'],
+  ['char', false, 'Digit9', '(9', '9', '(', '(9', '9', '('],
+  ['char', false, 'Digit0', ')0', '0', ')', ')0', '0', ')'],
+  ['char', false, 'Minus', '_-', '-', '_'],
+  ['char', false, 'Equal', '+=', '=', '+'],
+  ['action', false, 'Backspace', 'Backspace'],
+  ['char', false, 'Tab', 'Tab', '\t'],
+  ['char', true, 'KeyQ', 'Q', 'q', 'Q', 'Й', 'й', 'Й'],
+  ['char', true, 'KeyW', 'W', 'w', 'W', 'Ц', 'ц', 'Ц'],
+  ['char', true, 'KeyE', 'E', 'e', 'E', 'У', 'у', 'У'],
+  ['char', true, 'KeyR', 'R', 'r', 'R', 'К', 'к', 'К'],
+  ['char', true, 'KeyT', 'T', 't', 'T', 'Е', 'е', 'Е'],
+  ['char', true, 'KeyY', 'Y', 'y', 'Y', 'Н', 'н', 'Н'],
+  ['char', true, 'KeyU', 'U', 'u', 'U', 'Г', 'г', 'Г'],
+  ['char', true, 'KeyI', 'I', 'i', 'I', 'Ш', 'ш', 'Ш'],
+  ['char', true, 'KeyO', 'O', 'o', 'O', 'Щ', 'щ', 'Щ'],
+  ['char', true, 'KeyP', 'P', 'p', 'P', 'З', 'з', 'З'],
+  ['char', true, 'BracketLeft', '{[', '[', '{', 'Х', 'х', 'Х'],
+  ['char', true, 'BracketRight', '}]', ']', '}', 'Ъ', 'ъ', 'Ъ'],
+  ['char', false, 'Backslash', '|\\', '\\', '|', '/\\', '\\', '/'],
+  ['action', false, 'Delete', 'DEL'],
+  ['action', false, 'CapsLock', 'Caps Lock'],
+  ['char', true, 'KeyA', 'A', 'a', 'A', 'Ф', 'ф', 'Ф'],
+  ['char', true, 'KeyS', 'S', 's', 'S', 'Ы', 'ы', 'Ы'],
+  ['char', true, 'KeyD', 'D', 'd', 'D', 'В', 'в', 'В'],
+  ['char', true, 'KeyF', 'F', 'f', 'F', 'А', 'а', 'А'],
+  ['char', true, 'KeyG', 'G', 'g', 'G', 'П', 'п', 'П'],
+  ['char', true, 'KeyH', 'H', 'h', 'H', 'Р', 'р', 'Р'],
+  ['char', true, 'KeyJ', 'J', 'j', 'J', 'О', 'о', 'О'],
+  ['char', true, 'KeyK', 'K', 'k', 'K', 'Л', 'л', 'Л'],
+  ['char', true, 'KeyL', 'L', 'l', 'L', 'Д', 'д', 'Д'],
+  ['char', true, 'Semicolon', ':;', ';', ':', 'Ж', 'ж', 'Ж'],
+  ['char', true, 'Quote', '"\'', '\'', '"', 'Э', 'э', 'Э'],
+  ['char', false, 'Enter', 'ENTER', '\r'],
+  ['action', false, 'ShiftLeft', 'Shift'],
+  ['char', true, 'KeyZ', 'Z', 'z', 'Z', 'Я', 'я', 'Я'],
+  ['char', true, 'KeyX', 'X', 'x', 'X', 'Ч', 'ч', 'Ч'],
+  ['char', true, 'KeyC', 'C', 'c', 'C', 'С', 'с', 'C'],
+  ['char', true, 'KeyV', 'V', 'v', 'V', 'М', 'м', 'М'],
+  ['char', true, 'KeyB', 'B', 'b', 'B', 'И', 'и', 'И'],
+  ['char', true, 'KeyN', 'N', 'n', 'N', 'Т', 'т', 'Т'],
+  ['char', true, 'KeyM', 'M', 'm', 'M', 'Ь', 'ь', 'Ь'],
+  ['char', true, 'Comma', '<,', ',', '<', 'Б', 'б', 'Б'],
+  ['char', true, 'Period', '>.', '.', '>', 'Ю', 'ю', 'Ю'],
+  ['char', true, 'Slash', '?/', '/', '?', ',.', '.', ','],
+  ['action', false, 'ArrowUp', '\u2191'],
+  ['action', false, 'ShiftRight', 'Shift'],
+  ['action', false, 'ControlLeft', 'Ctrl'],
+  ['action', false, 'MetaLeft', 'Win'],
+  ['action', false, 'AltLeft', 'Alt'],
+  ['char', false, 'Space', '', ' '],
+  ['action', false, 'AltRight', 'Alt'],
+  ['action', false, 'ControlRight', 'Ctrl'],
+  ['action', false, 'ArrowLeft', '\u2190'],
+  ['action', false, 'ArrowDown', '\u2193'],
+  ['action', false, 'ArrowRight', '\u2192'],
 ];
 
 const stretchKeys = ['Backspace', 'Tab', 'Delete', 'CapsLock', 'Enter', 'ShiftLeft', 'ShiftRight', 'Space'];
@@ -195,6 +195,36 @@ const setNewLanguage = () => {
   }
 };
 
+textarea.insertText = function insertText(text) {
+  this.setRangeText(text, textarea.selectionStart, textarea.selectionEnd, 'end');
+};
+
+const setUpperCase = () => {
+  Object.keys(keyboard).forEach((i) => {
+    keyboard[i].nameToUpperCase();
+  });
+};
+
+const setLowerCase = () => {
+  Object.keys(keyboard).forEach((i) => {
+    keyboard[i].nameToLowerCase();
+  });
+};
+
+const keyboardRenderCase = () => {
+  if (isShiftLeft || isShiftRight) {
+    if (isCapsLock) {
+      setLowerCase();
+    } else {
+      setUpperCase();
+    }
+  } else if (isCapsLock) {
+    setUpperCase();
+  } else {
+    setLowerCase();
+  }
+};
+
 const clearActions = () => {
   isShiftLeft = false;
   isShiftRight = false;
@@ -208,13 +238,10 @@ const clearActions = () => {
   keyboard.AltLeft.DOMElement.classList.remove('pressed');
   keyboard.ControlLeft.DOMElement.classList.remove('pressed');
   keyboard.ControlRight.DOMElement.classList.remove('pressed');
+  keyboardRenderCase();
 };
 
-textarea.insertText = function insertText(text) {
-  this.setRangeText(text, textarea.selectionStart, textarea.selectionEnd, 'end');
-};
-
-/* keyboard function */
+/* keyboard functions */
 
 const printChar = (key) => {
   let char = (isShiftLeft || isShiftRight)
@@ -311,11 +338,13 @@ const startAction = (key) => {
       isShiftLeft = true;
       isShiftRight = false;
       keyboard.ShiftRight.DOMElement.classList.remove('pressed');
+      keyboardRenderCase();
       break;
     case 'ShiftRight':
       isShiftRight = true;
       isShiftLeft = false;
       keyboard.ShiftLeft.DOMElement.classList.remove('pressed');
+      keyboardRenderCase();
       break;
     case 'AltLeft':
       isAltLeft = true;
@@ -354,6 +383,7 @@ const startAction = (key) => {
     case 'CapsLock':
       isCapsLock = !isCapsLock;
       keyboard.CapsLock.DOMElement.classList.toggle('caps');
+      keyboardRenderCase();
       break;
     default:
   }
@@ -371,6 +401,7 @@ const stopAction = (key) => {
       if (isCtrlLeft || isCtrlRight || isAltLeft || isAltRight) {
         setNewLanguage();
       }
+      keyboardRenderCase();
       break;
     case 'ShiftRight':
       if (isShiftRight) {
@@ -382,6 +413,7 @@ const stopAction = (key) => {
       if (isCtrlLeft || isCtrlRight || isAltLeft || isAltRight) {
         setNewLanguage();
       }
+      keyboardRenderCase();
       break;
     case 'AltLeft':
       isAltLeft = false;
@@ -414,18 +446,22 @@ const stopAction = (key) => {
 /* drivers */
 
 const emulateKeyDown = (code) => {
-  keyboard[code].DOMElement.classList.add('pressed');
-  if (keyboard[code].type === 'action') {
-    startAction(code);
-    return;
+  if (keyboard[code]) {
+    keyboard[code].DOMElement.classList.add('pressed');
+    if (keyboard[code].type === 'action') {
+      startAction(code);
+      return;
+    }
+    printChar(code);
   }
-  printChar(code);
 };
 
 const emulateKeyUp = (code) => {
-  keyboard[code].DOMElement.classList.remove('pressed');
-  if (keyboard[code].type === 'action') {
-    stopAction(code);
+  if (keyboard[code]) {
+    keyboard[code].DOMElement.classList.remove('pressed');
+    if (keyboard[code].type === 'action') {
+      stopAction(code);
+    }
   }
 };
 
@@ -486,8 +522,19 @@ const onMouseUp = (event) => {
 /* class Key */
 
 class Key {
-  constructor(type, keyCode, enName, enContent, enModContent, ruName, ruContent, ruModContent) {
+  constructor(
+    type,
+    isMutable,
+    keyCode,
+    enName,
+    enContent,
+    enModContent,
+    ruName,
+    ruContent,
+    ruModContent,
+  ) {
     this.type = type;
+    this.isMutable = isMutable;
     this.DOMContent = {
       en: getDOMContent(enName),
     };
@@ -509,6 +556,8 @@ class Key {
     this.DOMElement.setAttribute('data-keycode', keyCode);
     this.DOMElement
       .appendChild(type === 'char' ? this.DOMContent[language.getCurrent()] : this.DOMContent.en);
+
+    this.nameToLowerCase();
 
     this.DOMElement.addEventListener('mousedown', (event) => {
       textarea.focus();
@@ -538,6 +587,18 @@ class Key {
         .replaceChild(this.DOMContent[language.getNext()], this.DOMContent[language.getCurrent()]);
     }
   }
+
+  nameToUpperCase() {
+    if (this.isMutable) {
+      this.DOMElement.classList.remove('lowercase');
+    }
+  }
+
+  nameToLowerCase() {
+    if (this.isMutable) {
+      this.DOMElement.classList.add('lowercase');
+    }
+  }
 }
 
 /* fill keyboard */
@@ -545,13 +606,13 @@ class Key {
 const fillKeyboard = () => {
   let keysRow;
   keys.forEach((i) => {
-    keyboard[i[1]] = new Key(...i);
-    if (firstInRow.includes(i[1])) {
+    keyboard[i[2]] = new Key(...i);
+    if (firstInRow.includes(i[2])) {
       keysRow = document.createElement('div');
       keysRow.classList.add('row');
       container.appendChild(keysRow);
     }
-    keysRow.appendChild(keyboard[i[1]].DOMElement);
+    keysRow.appendChild(keyboard[i[2]].DOMElement);
   });
 };
 fillKeyboard();
