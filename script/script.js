@@ -93,6 +93,7 @@ const getDOMContent = (content) => {
 /* constants */
 
 const keys = [
+//<type>,  <mutable>, <keyCode>, <name(en)>, <input(en)>, <input(en) + shift>, <name(ru)>, <input(ru)>, <input(ru) + shift>
   ['char', true, 'Backquote', '~`', '`', '~', 'Ё', 'ё', 'Ё'],
   ['char', false, 'Digit1', '!1', '1', '!', '!1', '1', '!'],
   ['char', false, 'Digit2', '@2', '2', '@', '"2', '2', '"'],
@@ -212,14 +213,8 @@ const setLowerCase = () => {
 };
 
 const keyboardRenderCase = () => {
-  if (isShiftLeft || isShiftRight) {
-    if (isCapsLock) {
-      setLowerCase();
-    } else {
-      setUpperCase();
-    }
-  } else if (isCapsLock) {
-    setUpperCase();
+  if ((isShiftLeft || isShiftRight) + isCapsLock === 1) {
+     setUpperCase();
   } else {
     setLowerCase();
   }
